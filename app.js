@@ -5,9 +5,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 
-const homeStartingContent = "Daily Posts technical update";
-const aboutContent = "I am Engineer in computer science ";
-const contactContent = "Hello Everyone I am Rahul kumar yadav";
+const homeStartingContent = "This Blogs is Purpopse of Daily technical Blogs posts and any type of technical doubt i am try to solve ";
+const aboutContent = "Hello I am Rahul Kumar I am Senior Developer I am currently Studying in B.tech form munger in Computer Science Engineering (A.I) and Completed My B.tech in 2026,my Session (2022-2026)";
+const contactContent = "Hello I am Rahul Kumar I am Senior Developer";
 
 const app = express();
 
@@ -18,7 +18,8 @@ app.use(express.static("public"));
 
 let posts = [];
 
-app.get("/", function(req, res){
+
+app.get("/", function(req, res){              
   res.render("home", {
     startingContent: homeStartingContent,
     posts: posts
